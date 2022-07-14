@@ -110,54 +110,88 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 15vh auto auto 20vh;
     height: 70vh;
+    overflow: hidden;
     }
-    @keyframes BG-1 {
+   @keyframes BG-1 {
         0% {
-            transform: translate(50px, -5rem);
+            transform: translate(-450px, -1rem);
+            background: rgb(223,139,155);
+            background: linear-gradient(90deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            opacity: 0%;
+        }
+        5% {
+            opacity: 15%;
         }
         10% {
-            transform: translate(140px, -7rem);
+            transform: translate(-250px, 2rem);
+            background: rgb(223,139,155);
+            background: linear-gradient(100deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            opacity: 60%;
         }
         20% {
-            transform: translate(260px, -10rem);
+            transform: translate(50px, 3rem);
+            background: rgb(223,139,155);
+            background: linear-gradient(110deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            opacity: 80%; 
        }
         30% {
-            transform: translate(480px, -6rem);
+            transform: translate(250px, 1rem);
+            background: rgb(223,139,155);
+            background: linear-gradient(120deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            opacity: none;
         }
         40% {
-            transform: translate(520px, -2rem);
+            transform: translate(450px, -1rem);
+            background: rgb(223,139,155);
+            background: linear-gradient(130deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            opacity: none;
         }
         50% {
-            transform: translate(600px, 0px);
+            transform: translate(650px, 0px);
+            background: rgb(223,139,155);
+            background: linear-gradient(140deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            opacity: none;
         }
         60% {
-            transform: translate(680px, 2rem);
+            transform: translate(850px, 2rem);
+            background: rgb(223,139,155);
+            background: linear-gradient(150deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            opacity: none;
         }
         70% {
-            transform: translate(800px, 6rem);
+            transform: translate(1050px, 3rem);
+            background: rgb(223,139,155);
+            background: linear-gradient(160deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            opacity: 80%;
        }
         80% {
-            transform: translate(930px, 11rem);
+            transform: translate(1250px, 1rem);
+            background: rgb(223,139,155);
+            background: linear-gradient(170deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            opacity: 60%;
         }
         90% {
-            transform: translate(1050px, 8rem);
+            transform: translate(1450px, -2rem);
+            background: rgb(223,139,155);
+            background: linear-gradient(180deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            opacity: 30%;
         }
         100% {
-            transform: translate(1120px, 3rem);
+            transform: translate(1650px, -3rem);
+            opacity: 0%;
+            background: rgb(223,139,155);
+            background: linear-gradient(190deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
         }
-    }  
+    }
     .WhatIdo__BG {
         margin: auto 0 auto 0;
         z-index: 10;
-        width: 400px;
-        height: 400px;
-        background-image: repeating-linear-gradient(to top, #A1EEF8, #DF8B9B);
+        width: 600px;
+        height: 600px;
         background-size:contain;
         border-radius: 50%;
         filter: blur(20px);
-        animation-iteration-count: infinite;
-        animation-delay: 0,2s;
-        animation: BG-1 12s;
+        animation: BG-1 20s linear infinite;
     }
         .WhatIdo__H3 {
             grid-area: WhatIdo;
@@ -322,33 +356,197 @@
             text-align: center;
         }
     .HowIdoit {
-        display: grid;
-        height: 70vh;
-        grid-template-areas: 
-        " One text1 two text2 title"
-        " three text3 four text4 title";
-        grid-template-columns: 150px 400px 150px 400px auto;
-        grid-template-rows: 50% 50%;
-        background-image: url(./img/HowIdoit\ -\ BG.png);
-        background-size: cover;
+    display: grid;
+    height: 70vh;
+    grid-template-areas: 
+    " One text1 two text2 title"
+    " three text3 four text4 title";
+    grid-template-columns: 150px 400px 150px 400px auto;
+    grid-template-rows: 50% 50%;
+    overflow: hidden;
     }
+        .HowIdoit__BG1 {
+        margin: auto 0 auto 0;
+        z-index: 10;
+        width: 500px;
+        height: 500px;
+        background-size:contain;
+        border-radius: 50%;
+        filter: blur(20px);
+        animation: BG-2 20s linear infinite;
+        }
+        @keyframes BG-2 {
+            0% {
+                transform: translate(-450px, -38rem);
+                background: rgb(107,165,247);
+                background: linear-gradient(90deg, rgba(107,165,247,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 0%;
+            }
+            5% {
+                opacity: 15%;
+            }
+            10% {
+                transform: translate(-250px, -35rem);
+                background: rgb(107,165,247);
+                background: linear-gradient(100deg, rgba(107,165,247,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 60%;
+            }
+            20% {
+                transform: translate(50px, -38rem);
+                background: rgb(107,165,247);
+                background: linear-gradient(110deg, rgba(107,165,247,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 80%; 
+           }
+            30% {
+                transform: translate(250px, -36rem);
+                background: rgb(107,165,247);
+                background: linear-gradient(120deg, rgba(107,165,247,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: none;
+            }
+            40% {
+                transform: translate(450px, -34rem);
+                background: rgb(107,165,247);
+                background: linear-gradient(130deg, rgba(107,165,247,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: none;
+            }
+            /* 50% {
+                transform: translate(650px, -5rem);
+                background: rgb(223,139,155);
+                background: linear-gradient(140deg, rgba(107,165,247,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: none;
+            } */
+            60% {
+                transform: translate(850px, -33rem);
+                background: rgb(107,165,247);
+                background: linear-gradient(150deg, rgba(107,165,247,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: none;
+            }
+            70% {
+                transform: translate(1050px, -28rem);
+                background: rgb(107,165,247);
+                background: linear-gradient(160deg, rgba(107,165,247,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 80%;
+           }
+            80% {
+                transform: translate(1250px, -36rem);
+                background: rgb(107,165,247);
+                background: linear-gradient(170deg, rgba(107,165,247,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 60%;
+            }
+            90% {
+                transform: translate(1450px, -33rem);
+                background: rgb(107,165,247);
+                background: linear-gradient(180deg, rgba(107,165,247,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 30%;
+            }
+            100% {
+                transform: translate(1650px, -30rem);
+                opacity: 0%;
+                background: rgb(107,165,247);
+                background: linear-gradient(190deg, rgba(107,165,247,1) 0%, rgba(161,238,248,1) 100%);
+            }
+        }
+        .HowIdoit__BG2 {
+        margin: auto 0 auto 0;
+        z-index: 12;
+        width: 350px;
+        height: 350px;
+        background-size:contain;
+        border-radius: 50%;
+        filter: blur(20px);
+        animation: BG-3 30s linear infinite;
+        z-index: 15;
+        }
+        @keyframes BG-3 {
+            100% {
+                transform: translate(-450px, 2%);
+                background: rgb(223,139,155);
+                background: linear-gradient(90deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 0%;
+            }
+            95% {
+                opacity: 15%;
+            }
+            90% {
+                transform: translate(-250px, -35rem);
+                background: rgb(107,165,247);
+                background: linear-gradient(100deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 60%;
+            }
+            80% {
+                transform: translate(50px, -38rem);
+                background: rgb(223,139,155);
+                background: linear-gradient(110deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 80%; 
+           }
+            70% {
+                transform: translate(250px, -36rem);
+                background: rgb(223,139,155);
+                background: linear-gradient(120deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: none;
+            }
+            60% {
+                transform: translate(450px, -34rem);
+                background: rgb(223,139,155);
+                background: linear-gradient(130deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: none;
+            }
+            /* 50% {
+                transform: translate(650px, -5rem);
+                background: rgb(223,139,155);
+                background: linear-gradient(140deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: none;
+            } */
+            50% {
+                transform: translate(850px, -33rem);
+                background: rgb(223,139,155);
+                background: linear-gradient(150deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: none;
+            }
+            30% {
+                transform: translate(1050px, -28rem);
+                background: rgb(223,139,155);
+                background: linear-gradient(160deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 80%;
+           }
+            20% {
+                transform: translate(1250px, -36rem);
+                background: rgb(223,139,155);
+                background: linear-gradient(170deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 60%;
+            }
+            10% {
+                transform: translate(1450px, -33rem);
+                background: rgb(223,139,155);
+                background: linear-gradient(180deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 30%;
+            }
+            0% {
+                transform: translate(1650px, -30rem);
+                opacity: 0%;
+                background: rgb(223,139,155);
+                background: linear-gradient(190deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            }
+        }
         .HowIdoit__title {
-            font-size: 4rem;
-            grid-area: title;
-            font-family: 'Oi', cursive;
-            color: #666666;
-            justify-self: right;
-            align-self: center;
-            padding: 0 20% 0 0;
+        font-size: 4rem;
+        grid-area: title;
+        font-family: 'Oi', cursive;
+        color: #666666;
+        justify-self: right;
+        align-self: center;
+        padding: 0 20% 0 0;
+        z-index: 20;
         }
         .HowIdoit__One {
-            grid-area: One;
-            font-size: 4rem;
-            font-family: 'Oi', cursive;
-            color: #666666;
-            justify-self: right;
-            padding: 0 30px 0 0;
-            align-self: center;
+        grid-area: One;
+        font-size: 4rem;
+        font-family: 'Oi', cursive;
+        color: #666666;
+        justify-self: right;
+        padding: 0 30px 0 0;
+        align-self: center;
+        z-index: 20;
         }
         .HowIdoit_text1 {
             grid-area: text1;
@@ -356,6 +554,7 @@
             font-family: 'Roboto', sans-serif;
             color: #666666;
             align-self: center;
+            z-index: 20;
         }
         .HowIdoit__two {
             grid-area: two;
@@ -365,6 +564,7 @@
             justify-self: right;
             padding: 0 30px 0 0;
             align-self: center;
+            z-index: 20;
         }
         .HowIdoit_text2 {
             grid-area: text2;
@@ -372,6 +572,7 @@
             font-family: 'Roboto', sans-serif;
             color: #666666;
             align-self: center;
+            z-index: 20;
         }
         .HowIdoit__three {
             grid-area: three;
@@ -381,6 +582,7 @@
             justify-self: right;
             padding: 0 30px 0 0;
             align-self: center;
+            z-index: 20;
         }
         .HowIdoit_text3 {
             grid-area: text3;
@@ -388,6 +590,7 @@
             font-family: 'Roboto', sans-serif;
             color: #666666;
             align-self: center;
+            z-index: 20;
         }
         .HowIdoit__four {
             grid-area: four;
@@ -397,6 +600,7 @@
             justify-self: right;
             padding: 0 30px 0 0;
             align-self: center;
+            z-index: 20;
         }
         .HowIdoit_text4 {
             grid-area: text4;
@@ -404,6 +608,7 @@
             font-family: 'Roboto', sans-serif;
             color: #666666;
             align-self: center;
+            z-index: 20;
         }
     .Banner__aboutme {
     display: grid;
@@ -519,21 +724,21 @@
     padding-top: 5vh;
     font-size: 1.5rem;
     }
-    @media (max-width: 480px) {
+@media (max-width: 480px) {
         .header {
-            height: 100vh;
-            background-position: right;
+        height: 100vh;
+        background-position: right;
         }
         li {
-            display: inline-block;
-            width: auto;
-            position:relative;
-            font-size: 1rem;
-            margin-left: 4vh;
-            font-weight: 500;
+        display: inline-block;
+        width: auto;
+        position:relative;
+        font-size: 1rem;
+        margin-left: 4vh;
+        font-weight: 500;
         }
         .menu {
-            margin-bottom: 10vh;
+        margin-bottom: 10vh;
         }
         .Banner {
         height: 0vh;
