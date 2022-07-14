@@ -163,6 +163,42 @@
             display: none;
         }
     }
+    @keyframes BG-1 {
+        0% {
+            transform: translate(50px, -5rem);
+        }
+        10% {
+            transform: translate(140px, -7rem);
+        }
+        20% {
+            transform: translate(260px, -10rem);
+       }
+        30% {
+            transform: translate(480px, -6rem);
+        }
+        40% {
+            transform: translate(520px, -2rem);
+        }
+        50% {
+            transform: translate(600px, 0px);
+        }
+        60% {
+            transform: translate(680px, 2rem);
+        }
+        70% {
+            transform: translate(800px, 6rem);
+       }
+        80% {
+            transform: translate(930px, 11rem);
+        }
+        90% {
+            transform: translate(1050px, 8rem);
+        }
+        100% {
+            transform: translate(1120px, 3rem);
+        
+    }
+}
     .WhatIdo {
     padding: 5vh 15vh 10vh 15vh;
     display: grid;
@@ -175,8 +211,19 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 15vh auto auto 20vh;
     height: 70vh;
-    background-image: url(./img/WhatIdo.png);
-    background-size: cover
+    }
+    .WhatIdo__BG {
+        margin: auto 0 auto 0;
+        z-index: 10;
+        width: 400px;
+        height: 400px;
+        background-image: repeating-linear-gradient(to top, #A1EEF8, #DF8B9B);
+        background-size:contain;
+        border-radius: 50%;
+        filter: blur(20px);
+        animation-iteration-count: infinite;
+        animation-delay: 0,2s;
+        animation: BG-1 12s;
     }
         .WhatIdo__H3 {
             grid-area: WhatIdo;
@@ -184,6 +231,7 @@
             font-size: 2rem;
             font-family: 'Oi', cursive;
             line-height: 2rem;
+            z-index: 20;
         }
         .WhatIdo__H1 {
             grid-area: DESIGN;
@@ -191,12 +239,14 @@
             font-size: 6rem;
             font-family: 'Oi', cursive;
             line-height: 6rem;
+            z-index: 20;
         }
         .WhatIdo__p {
             grid-area: Parrafo;
             color: #666666;
             font-size: 1rem;
             font-family: 'Roboto', sans-serif;
+            z-index: 20;
         }
         .WhatIdo__skills {
             grid-area: Skills;
@@ -207,6 +257,7 @@
             line-height: 6rem;
             padding: 7vh;
             -webkit-text-stroke: 0.07rem #666666;
+            z-index: 20;
         }
     @media (max-width: 480px) {
         .WhatIdo {
