@@ -1,0 +1,661 @@
+<style>
+        html {
+            font-size: 62.5%;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+            font-size:0; /* truco por el uso de inline-block*/
+        }
+        li {
+            display: inline-block;
+            width: 10rem;
+            position:relative;
+            font-size: 1.5rem;
+            margin-left: 5vh;
+            font-weight: 500;
+        }
+        ul ul {
+            position: relative;
+            display: none;
+        }
+        ul ul li {
+            display: block;
+            width: 100%;
+            padding: 10px;
+        }
+        ul ul li a {color: #666666;}
+        ul li:hover ul {
+            position: absolute;
+            display:block;
+        }
+        .header {
+            height: 80vh;
+            background-image: url(./img/header\ BG\ clean-01.jpg);
+            background-size: cover;
+            padding-top: 1rem;
+        }   
+        .menu {
+            height: 15vh;
+            font-family: 'Roboto', sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #ffffff;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10vh;
+        }
+        @media (max-width: 480px) {
+            .header {
+                height: 100vh;
+                background-position: right;
+            }
+            li {
+                display: inline-block;
+                width: auto;
+                position:relative;
+                font-size: 1rem;
+                margin-left: 4vh;
+                font-weight: 500;
+            }
+            .menu {
+                margin-bottom: 10vh;
+            }
+            
+        }
+        .menu__lista {
+            display: block;
+        }
+    .Banner {
+    height: 70vh;
+    display: grid;
+    grid-template-areas: 
+    " . BannerTitle BannerStar "
+    ;
+    grid-template-columns: 20vw auto 20vw;
+    grid-template-rows: auto;
+    }
+        .Banner--H2 {
+            font-family: 'Oi', cursive;
+            font-size: 4rem;
+            color: white;
+            line-height: 4rem;
+            text-justify: center;
+            z-index: 20;
+            grid-area: BannerTitle;
+            height: 8rem;
+            width: 25rem;
+            justify-self: right;
+        }
+        .Banner--H1 {
+            align-items:baseline;
+            text-align: start;
+            font-family: 'Oi', cursive;
+            font-size: 6rem;
+            color: white;
+            line-height: 6rem;
+            z-index: 20;
+            grid-area: BannerTitle;
+            padding: 12rem 0 0 0;
+            width: 30rem;
+            justify-self: right;
+        }
+        .Banner--Star {
+            grid-area: BannerStar;
+            padding: 6rem 0 0 3rem;
+        }
+        .Banner--BG {
+            height: 10vh;
+            grid-area: BannerTitle;
+            image-rendering: pixelated;
+            z-index: 10;
+            justify-self: left;
+            align-self:baseline  ;
+        }
+        @media (max-width: 480px) {
+            .Banner {
+            height: 0vh;
+            display: grid;
+            grid-template-areas: 
+            "BannerTitle"
+            ;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            padding: 0 0 0 0;
+        }
+        .Banner--H2 {
+            grid-area: BannerTitle;
+            font-family: 'Oi', cursive;
+            font-size: 2rem;
+            color: white;
+            width: 300px;
+            align-self:flex-start;
+            line-height: 2rem;
+            text-align: left;
+            justify-self: left;
+            padding: 0 0 0 20px;
+        }
+        .Banner--H1 {
+            grid-area: BannerTitle;
+            align-items:baseline;
+            text-align: start;
+            font-family: 'Oi', cursive;
+            font-size: 4rem;
+            color: white;
+            width: 400px;
+            line-height: 4rem;
+            text-align: right;
+            padding: 300px 20px 0 0;
+        }
+        .Banner--BG {
+            height: auto;
+            grid-area: BannerTitle;
+            z-index: 10;
+            justify-self: left;
+            align-self: center;
+            justify-self: center;
+        }
+        .Banner--Star {
+            display: none;
+        }
+    }
+    .WhatIdo {
+    padding: 5vh 15vh 10vh 15vh;
+    display: grid;
+    grid-template-areas:
+    " . Skills" 
+    " WhatIdo Skills "
+    " DESIGN Skills "
+    " Parrafo Skills "
+    ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15vh auto auto 20vh;
+    height: 70vh;
+    background-image: url(./img/WhatIdo.png);
+    background-size: cover
+    }
+        .WhatIdo__H3 {
+            grid-area: WhatIdo;
+            color: #666666;
+            font-size: 2rem;
+            font-family: 'Oi', cursive;
+            line-height: 2rem;
+        }
+        .WhatIdo__H1 {
+            grid-area: DESIGN;
+            color: #666666;
+            font-size: 6rem;
+            font-family: 'Oi', cursive;
+            line-height: 6rem;
+        }
+        .WhatIdo__p {
+            grid-area: Parrafo;
+            color: #666666;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+        }
+        .WhatIdo__skills {
+            grid-area: Skills;
+            color: white;
+            font-size: 2rem;
+            font-family: 'Oi', cursive;
+            text-align: end;
+            line-height: 6rem;
+            padding: 7vh;
+            -webkit-text-stroke: 0.07rem #666666;
+        }
+    @media (max-width: 480px) {
+        .WhatIdo {
+            display: grid;
+            grid-template-areas: 
+            " WhatIdo "
+            " DESIGN"
+            " Parrafo"
+            ;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            padding: 5vh 30px 5vh 30px;
+            height: 70vh;
+        }
+        .WhatIdo__skills {
+            display: none;
+        }
+        }
+    .services {
+        display: flex;
+        flex-wrap: wrap;
+        height: 70vh;
+        background-image: url(./img/Gradient-2.png);
+        background-size: cover;
+        justify-content: space-around;
+    }
+    @media (max-width: 480px) {
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            height: auto;
+            background-image: url(./img/Gradient-2.png);
+            background-size: cover;
+            justify-content: space-around;
+        }
+        }
+        .services__first {
+            height: 70vh;
+            width: 400px;
+            display: grid;
+            grid-template-areas: 
+            "top"
+            "mid"
+            "bot"
+            ;
+            grid-template-rows: 30% 40% 30%;
+            grid-template-columns: auto;
+            background-image: url(./img/Panel\ 1.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .services__first__top {
+            grid-area: top;
+            font-family: 'Oi', cursive;
+            color: #666666;
+            font-size: 2rem;
+            width: 200px;
+            line-height: 2rem;
+            padding: 20% 0 0 0;
+        }
+        .services__first__mid {
+            grid-area: mid;
+            font-family: 'Roboto', sans-serif;
+            color: #666666;
+            font-size: 1rem;
+            padding: 0 40px 0 60px;
+            align-self: center;
+
+
+        }
+        .services__first__bot {
+            grid-area: bot;
+            padding: 0 0 0 290px;
+        }
+        .services__second {
+            height: 70vh;
+            width: 400px;
+            display: grid;
+            grid-template-areas: 
+            "top"
+            "mid"
+            "bot"
+            ;
+            grid-template-rows: 30% 40% 30%;
+            grid-template-columns: auto;
+            background-image: url(./img/Panel\ 2.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .services__second__top {
+            grid-area: top;
+            padding: 0 0 0 0;
+            align-self: center;
+            justify-self: center;
+        }
+        .services__second__mid {
+            grid-area: mid;
+            font-family: 'Oi', cursive;
+            color: #666666;
+            font-size: 2rem;
+            width: 200px;
+            line-height: 2rem;
+            padding: 60px 0 0 0;
+            text-align: center;
+        }
+        .services__second__bot {
+            grid-area: bot;
+            font-family: 'Roboto', sans-serif;
+            color: #666666;
+            font-size: 1rem;
+            padding: 0 80px 0 60px;
+            align-self: center;
+        }
+        .services__third {
+            height: 70vh;
+            width: 400px;
+            display: grid;
+            grid-template-areas: 
+            "top"
+            "mid"
+            "bot"
+            ;
+            grid-template-rows: 30% 40% 30%;
+            grid-template-columns: auto;
+            background-image: url(./img/Panel\ 2.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .services__third__top {
+            grid-area: top;
+            font-family: 'Roboto', sans-serif;
+            color: #666666;
+            font-size: 1rem;
+            padding: 0 80px 0 60px;
+            align-self: center;
+            text
+        }
+        .services__third__mid {
+            grid-area: mid;
+            padding: 0 0 0 0;
+            align-self: center;
+            justify-self: center;
+        }
+        .services__third__bot {
+            grid-area: bot;
+            font-family: 'Oi', cursive;
+            color: #666666;
+            font-size: 2rem;
+            width: 200px;
+            line-height: 2rem;
+            padding: 60px 0 0 0;
+            text-align: center;
+        }
+    .HowIdoit {
+        display: grid;
+        height: 70vh;
+        grid-template-areas: 
+        " One text1 two text2 title"
+        " three text3 four text4 title";
+        grid-template-columns: 150px 400px 150px 400px auto;
+        grid-template-rows: 50% 50%;
+        background-image: url(./img/HowIdoit\ -\ BG.png);
+        background-size: cover;
+    }
+        .HowIdoit__title {
+            font-size: 4rem;
+            grid-area: title;
+            font-family: 'Oi', cursive;
+            color: #666666;
+            justify-self: right;
+            align-self: center;
+            padding: 0 20% 0 0;
+        }
+        .HowIdoit__One {
+            grid-area: One;
+            font-size: 4rem;
+            font-family: 'Oi', cursive;
+            color: #666666;
+            justify-self: right;
+            padding: 0 30px 0 0;
+            align-self: center;
+        }
+        .HowIdoit_text1 {
+            grid-area: text1;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+            color: #666666;
+            align-self: center;
+        }
+        .HowIdoit__two {
+            grid-area: two;
+            font-size: 4rem;
+            font-family: 'Oi', cursive;
+            color: #666666;
+            justify-self: right;
+            padding: 0 30px 0 0;
+            align-self: center;
+        }
+        .HowIdoit_text2 {
+            grid-area: text2;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+            color: #666666;
+            align-self: center;
+        }
+        .HowIdoit__three {
+            grid-area: three;
+            font-size: 4rem;
+            font-family: 'Oi', cursive;
+            color: #666666;
+            justify-self: right;
+            padding: 0 30px 0 0;
+            align-self: center;
+        }
+        .HowIdoit_text3 {
+            grid-area: text3;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+            color: #666666;
+            align-self: center;
+        }
+        .HowIdoit__four {
+            grid-area: four;
+            font-size: 4rem;
+            font-family: 'Oi', cursive;
+            color: #666666;
+            justify-self: right;
+            padding: 0 30px 0 0;
+            align-self: center;
+        }
+        .HowIdoit_text4 {
+            grid-area: text4;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+            color: #666666;
+            align-self: center;
+        }
+        @media (max-width: 480px) {
+            .HowIdoit {
+            display: grid;
+            height: 140vh;
+            grid-template-areas: 
+            "title title"
+            "One text1"
+            "two text2"
+            "three text3"
+            "four text4";
+            grid-template-columns: 100px auto;
+            grid-template-rows: auto auto auto auto auto;
+            }
+            .HowIdoit__title {
+                font-size: 4rem;
+                line-height: 4rem;
+                grid-area: title;
+                font-family: 'Oi', cursive;
+                color: #666666;
+                justify-self: right;
+                align-self: center;
+                margin: 80px 0 20px 0;
+            }
+            .HowIdoit_text1 {
+                grid-area: text1;
+                font-size: 1rem;
+                font-family: 'Roboto', sans-serif;
+                color: #666666;
+                align-self: center;
+                margin: 0 30px 0 0;
+            }
+            .HowIdoit_text2 {
+                grid-area: text2;
+                font-size: 1rem;
+                font-family: 'Roboto', sans-serif;
+                color: #666666;
+                align-self: center;
+                margin: 0 30px 0 0;
+            }
+            .HowIdoit_text3 {
+                grid-area: text3;
+                font-size: 1rem;
+                font-family: 'Roboto', sans-serif;
+                color: #666666;
+                align-self: center;
+                margin: 0 30px 0 0;
+            }
+            .HowIdoit_text4 {
+                grid-area: text4;
+                font-size: 1rem;
+                font-family: 'Roboto', sans-serif;
+                color: #666666;
+                align-self: center;
+                margin: 0 30px 0 0;
+            }
+        }
+    .Banner__aboutme {
+    display: grid;
+    grid-template-areas: 
+    " 4star Designer . "
+    " . Designer 7star "
+    ;
+    grid-template-columns: 20% 60% auto;
+    grid-template-rows: 65% 35%;
+    height: 60vh;   
+    }
+        .Banner__aboutme__4star {
+        grid-area: 4star;
+        justify-self: right;
+        }
+        .Banner__aboutme__Designer--text {
+        grid-area: Designer;
+        justify-self: center;
+        z-index: 20;
+        align-self: center;
+        font-family: 'Oi', cursive;
+        font-size: 6rem;
+        color: white;
+        line-height: 6rem;
+        }
+        .Banner__aboutme__Designer--img {
+        grid-area: Designer;
+        z-index: 10;
+        justify-self: center;
+        height: 50vh;
+        }
+        .Banner__aboutme__7star {
+        grid-area: 7star;
+        justify-self: left;
+        align-self: flex-end;
+        margin: 0 0 5vh 0;
+        }
+        @media (max-width: 480px) {
+            .Banner__aboutme__Designer--text {
+                font-size: 3.5rem;
+                line-height: 3rem;
+                text-align: center;
+                padding: 150px 0 0 0 ;
+            }
+        }
+    .Aboutme__skills {
+    display: grid;
+    grid-template-areas: 
+    " title strokeStar"
+    " content content";
+    grid-template-rows: auto auto;
+    grid-template-columns: 60% auto;
+    }
+        .Aboutme__skills__title {
+        grid-area: title;
+        font-family: 'Oi', cursive;
+        font-size: 6rem;
+        color: #666666;
+        line-height: 6rem;   
+        justify-self: right;
+        margin: 8px 0 0 0 ;
+        padding: 200px 40px 150px 0;
+        }
+        .Aboutme__skills__strokeStar {
+        grid-area: strokeStar;
+        justify-self: left;
+        padding: 200px 0 0 0;
+        }
+    @media (max-width: 480px) {
+        .Aboutme__skills {
+        grid-template-areas: 
+        " strokeStar2"
+        " title "
+        " strokeStar "
+        " content "
+        ;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto;
+        }
+            .Aboutme__skills__title {
+            font-size: 3.5rem;
+            line-height: 3.5rem;   
+            justify-self: center;
+            margin: 0 0 0 0 ;
+            padding: 50px 0 50px 0;
+            }
+            .Aboutme__skills__strokeStar {
+            justify-self: center;
+            padding: 0 0 50px 0 ;
+            }
+            .Aboutme__template__strokeStar2 {
+            grid-area: strokeStar2;
+            justify-self: center;
+            }
+    }
+        .Aboutme__skills__content {
+        display: flex;
+        height: auto;
+        flex-wrap: wrap;
+        width: auto;
+        grid-area: content;
+        justify-content: space-around;
+        }
+            .Aboutme__skills__content--grid {
+            display: grid;
+            grid-template-areas: 
+            "Indicador"
+            "title"
+            "text";
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto;
+            width: 500px;
+            margin: 50px 0 70px 0;
+            }
+                .Aboutme__skills__content--grid--indicador {
+                grid-area: Indicador;
+                justify-self: center;
+                }
+                .Aboutme__skills__content--grid--title {
+                grid-area: title;
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #666666;
+                text-align: center;
+                justify-self: center;
+                margin: 10px 0 0 0 ;
+                }
+                .Aboutme__skills__content--grid--text {
+                grid-area: text;
+                font-size: 1rem;
+                font-family: 'Roboto', sans-serif;
+                color: #666666;
+                width: 250px;
+                text-align:justify;
+                justify-self: center;
+                margin: 10px 0 0 0 ;
+                }
+    .footer {
+    height: 12vh;
+    background-image: url(./img/FOOTER.png);
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 5vh;
+    font-size: 1.5rem;
+    }
+    @media (max-width: 480px) {
+        .footer {
+            height: 10vh;
+            padding-top: 0;
+        }
+    }
+</style>
