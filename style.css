@@ -196,9 +196,8 @@
         }
         100% {
             transform: translate(1120px, 3rem);
-        
-    }
-}
+        }
+    }   
     .WhatIdo {
     padding: 5vh 15vh 10vh 15vh;
     display: grid;
