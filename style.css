@@ -236,8 +236,6 @@
         justify-content: space-around;
     }
         .services__first {
-            height: 70vh;
-            width: 400px;
             display: grid;
             grid-template-areas: 
             "top"
@@ -245,11 +243,16 @@
             "bot"
             ;
             grid-template-rows: 30% 40% 30%;
-            grid-template-columns: auto;
-            background-image: url(./img/Panel\ 1.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
+            z-index: 15;
+            width: 300px;
+            height: 620px;
+            border-radius: 60px;
+            margin: 70px 50px 0 50px;
+            justify-content: center;
+            background: rgb(107,165,247);
+            background: linear-gradient(90deg, rgba(107,165,247,1) 0%, rgba(161,238,248,1) 100%);
+            box-shadow: 10px 5px 15px rgba(102, 102, 102, 0.15);
+            /* animation: Panel-1 30s linear infinite; */
         }
         .services__first__top {
             grid-area: top;
@@ -259,6 +262,7 @@
             width: 200px;
             line-height: 2rem;
             padding: 20% 0 0 0;
+            z-index: 20;
         }
         .services__first__mid {
             grid-area: mid;
@@ -267,16 +271,110 @@
             font-size: 1rem;
             padding: 0 40px 0 60px;
             align-self: center;
-
-
+            z-index: 20;
         }
         .services__first__bot {
             grid-area: bot;
             padding: 0 0 0 290px;
+            z-index: 20;
+        }
+        @keyframes Panel-1 {
+            100% {
+                background: rgb(223,139,155);
+                background: linear-gradient(90deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 80;
+            }
+            95% {
+                background: rgb(223,139,155);
+                background: linear-gradient(106deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: none;
+            }
+            90% {
+                background: rgb(107,165,247);
+                background: linear-gradient(123deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            }
+            85% {
+                background: rgb(223,139,155);
+                background: linear-gradient(138deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+           }
+            80% {
+                background: rgb(223,139,155);
+                background: linear-gradient(156deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+           }
+            75% {
+                background: rgb(223,139,155);
+                background: linear-gradient(172deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            }
+            70% {
+                background: rgb(223,139,155);
+                background: linear-gradient(189deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            }
+            65% {
+                background: rgb(223,139,155);
+                background: linear-gradient(205deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            }
+            60% {
+                background: rgb(223,139,155);
+                background: linear-gradient(222deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            }
+            55% {
+                background: rgb(223,139,155);
+                background: linear-gradient(238deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            }
+            50% {
+                background: rgb(223,139,155);
+                background: linear-gradient(255deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            }
+            45% {
+                background: rgb(223,139,155);
+                background: linear-gradient(271deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            }
+            40% {
+                background: rgb(223,139,155);
+                background: linear-gradient(288deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            }
+            35% {
+                background: rgb(223,139,155);
+                background: linear-gradient(304deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 80;
+           }
+            30% {
+                background: rgb(223,139,155);
+                background: linear-gradient(321deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 60;
+           }
+            25% {
+                background: rgb(223,139,155);
+                background: linear-gradient(337deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 40;
+            }
+            20% {
+                background: rgb(223,139,155);
+                background: linear-gradient(354deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 20;
+            }
+            15% {
+                background: rgb(223,139,155);
+                background: linear-gradient(10deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: none;
+            }
+            10% {
+                background: rgb(223,139,155);
+                background: linear-gradient(27deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 20;
+            }
+            5% {
+                background: rgb(223,139,155);
+                background: linear-gradient(43deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 40;
+            }
+            0% {
+                background: rgb(223,139,155);
+                background: linear-gradient(60deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                opacity: 60;
+            }
         }
         .services__second {
-            height: 70vh;
-            width: 400px;
             display: grid;
             grid-template-areas: 
             "top"
@@ -284,11 +382,16 @@
             "bot"
             ;
             grid-template-rows: 30% 40% 30%;
-            grid-template-columns: auto;
-            background-image: url(./img/Panel\ 2.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
+            z-index: 15;
+            width: 300px;
+            height: 620px;
+            border-radius: 60px;
+            margin: 70px 50px 0 50px;
+            justify-content: center;
+            background: rgb(223,139,155);
+            background: linear-gradient(40deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+            box-shadow: 10px 5px 15px rgba(102, 102, 102, 0.15);
+            
         }
         .services__second__top {
             grid-area: top;
@@ -303,7 +406,8 @@
             font-size: 2rem;
             width: 200px;
             line-height: 2rem;
-            padding: 60px 0 0 0;
+            padding: 20% 230px 0 0;
+            z-index: 20;
             text-align: center;
         }
         .services__second__bot {
@@ -311,12 +415,10 @@
             font-family: 'Roboto', sans-serif;
             color: #666666;
             font-size: 1rem;
-            padding: 0 80px 0 60px;
+            padding: 0 55px 0 80px;
             align-self: center;
         }
         .services__third {
-            height: 70vh;
-            width: 400px;
             display: grid;
             grid-template-areas: 
             "top"
@@ -324,20 +426,23 @@
             "bot"
             ;
             grid-template-rows: 30% 40% 30%;
-            grid-template-columns: auto;
-            background-image: url(./img/Panel\ 2.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
+            z-index: 15;
+            width: 300px;
+            height: 620px;
+            border-radius: 60px;
+            margin: 70px 50px 0 50px;
+            justify-content: center;
+            background: rgb(237,218,188);
+            background: linear-gradient(280deg, rgba(237,218,188,1) 0%, rgba(224,124,150,1) 100%);
+            box-shadow: 10px 5px 15px rgba(102, 102, 102, 0.15);
         }
         .services__third__top {
             grid-area: top;
             font-family: 'Roboto', sans-serif;
             color: #666666;
             font-size: 1rem;
-            padding: 0 80px 0 60px;
+            padding: 0 55px 0 80px;
             align-self: center;
-            text
         }
         .services__third__mid {
             grid-area: mid;
@@ -352,7 +457,8 @@
             font-size: 2rem;
             width: 200px;
             line-height: 2rem;
-            padding: 60px 0 0 0;
+            padding: 20% 230px 0 0;
+            z-index: 20;
             text-align: center;
         }
     .HowIdoit {
@@ -364,6 +470,7 @@
     grid-template-columns: 150px 400px 150px 400px auto;
     grid-template-rows: 50% 50%;
     overflow: hidden;
+    margin: 200px 0 100px 0;
     }
         .HowIdoit__BG1 {
         margin: auto 0 auto 0;
@@ -897,5 +1004,65 @@
         height: 10vh;
         padding-top: 0;
         }
+    }
+@media (min-width: 481px) and (max-width: 1199px) {
+    .Banner--Star {
+        display: none;
+    }
+    .Banner--H2 {
+        font-size: 2rem;
+        width: 10rem;
+        line-height: 2rem;
+    }
+    .Banner--H1 {
+        font-size: 2rem;
+        width: 10rem;
+        line-height: 2rem;
+    }
+    .services {
+        height: auto;
+    }
+    .HowIdoit {
+        display: grid;
+        height: 140vh;
+        grid-template-areas: 
+        "title title"
+        "One text1"
+        "two text2"
+        "three text3"
+        "four text4";
+        grid-template-columns: 100px auto;
+        grid-template-rows: auto auto auto auto auto;
+        }
+        .HowIdoit__title {
+            justify-self: center;
+            }
+    .WhatIdo {
+        display: grid;
+        grid-template-areas: 
+        " WhatIdo "
+        " DESIGN"
+        " Parrafo"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        padding: 10vh 30px 5vh 20vh;
+        height: auto;
+        }   
+            .WhatIdo__BG {
+            display: none;
+            }
+            .WhatIdo__skills {
+            display: none;
+            }
+            .WhatIdo__H3 {
+                text-align: center;
+            }
+            .WhatIdo__H1 {
+                text-align: center;
+            }
+            .WhatIdo__p {
+            text-align: center;
+            }
     }
 </style>
