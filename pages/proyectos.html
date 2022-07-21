@@ -1,35 +1,98 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <header>
-        <nav id="Inicio">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../Subpages/sobre-mi.html">Sobre mi</a></li>
-                <li><a href="../Subpages/proyectos.html">Proyectos</a></li>
-                <li><a href="../index.html">Servicios</a></li>
-                <li><a href="../Subpages/contacta.html">Contacta</a></li>    
+    <header class="header">
+        <nav id="Inicio" class="menu">
+            <ul class="menu__lista">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="./sobre-mi.html">ABOUT ME</a></li>
+                <li><a href="./proyectos.html">PORTFOLIO</a></li>
+                <li>SERVICES
+                    <ul>
+                        <li><a href="./pages/servicios/diseño-web.html">WEB DESIGN</a></li>
+                        <li><a href="./pages/servicios/social-media.html">SOCIAL MEDIA</a></li>
+                        <li><a href="./pages/servicios/app-design.html">APP DESIGN</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contacta.html">CONTACT</a></li>
             </ul>
         </nav>
-    </header>
-    <section>
-        <img src="https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Project">
-        <ol>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-        </ol>
-    </section>
-    <footer>
-        <a href="../index.html">Volver al inicio</a>
-    </footer>
+        <div class="Portfolio__Banner">
+            <div class="Portfolio__Header__Star">
+                <img src="../img/Portfolio__UIDesign__Header__Star.png" alt="">
+            </div>
+            <div class="Portfolio__Header__img">
+                <img src="../img/Portfolio__UIDesign__Header.png" alt="">
+            </div>
+            <div class="Portfolio__Header__text">
+                <p>UI</p>
+                <p>Design</p>
+            </div>
+        </div>
+        <section>
+            <div class="Portfolio__UIDESIGN__BG">
+                <div class="services__first">
+                    <p class="services__first__top">Atelier</p>
+                    <p class="services__first__mid">Kindergarten based on Bogota, Colombia. Its project wants to focus the whole process on kid’s interest and skills</p>
+                    <img src="../img/Portfolio__UIDesign__Atelier__Star.png" alt="" class="services__first__bot">
+                </div>
+                <div class="services__second">
+                    <img src="../img/Portfolio__UIDesign__Coronel__Star.png" alt="" class="services__second__top">
+                    <p class="services__second__mid">Coronel Lawyer</p>
+                    <p class="services__second__bot">Lawyer based on Bogota, Colombia. Specialize in electoral processes, his personal signature: Transparency</p>
+                </div>
+                <div class="services__third">
+                    <p class="services__third__top">Growing personal care brand based on Bucaramanga, Colombia. Its products not only cares in the quality of its materials also wants reduce the impact on the enviroment</p>
+                    <img src="../img/Portfolio__UIDesign__Coronel__Star.png" alt="" class="services__third__mid">
+                    <p class="services__third__bot">Casa Mare</p>
+                </div>
+            </div>
+        </section>
+        <div class="Portfolio__SocialMedia__BG">
+            <div class="Portfolio__SocialMedia__Star4">
+                <img src="../img/Portfolio__SocialMediaDesign__Star4.png" alt="">
+            </div>
+            <div class="Portfolio__SocialMedia__img">
+                <img src="../img/Portfolio__SocialMediaDesign__Header.png" alt="">
+            </div>
+            <div class="Portfolio__SocialMedia__text">
+                <p class="Portfolio__SocialMedia__text2">Social Media</p>
+                <p>Design</p>
+            </div>
+            <div class="Portfolio__SocialMedia__Star7">
+                <img src="../img/Portfolio__SocialMediaDesign__Star7.png" alt="">
+            </div>
+        </div>
+        <section>
+            <div class="Portfolio__SOCIALMEDIA__Panel">
+                <div class="services__first">
+                    <p class="services__first__top">PROJECT#1</p>
+                    <p class="services__first__mid">Kindergarten based on Bogota, Colombia. Its project wants to focus the whole process on kid’s interest and skills</p>
+                    <img src="../img/Portfolio__UIDesign__Atelier__Star.png" alt="" class="services__first__bot">
+                </div>
+                <div class="services__second">
+                    <img src="../img/Portfolio__UIDesign__Coronel__Star.png" alt="" class="services__second__top">
+                    <p class="services__second__mid">Coronel Lawyer</p>
+                    <p class="services__second__bot">Lawyer based on Bogota, Colombia. Specialize in electoral processes, his personal signature: Transparency</p>
+                </div>
+                <div class="services__third">
+                    <p class="services__third__top">Growing personal care brand based on Bucaramanga, Colombia. Its products not only cares in the quality of its materials also wants reduce the impact on the enviroment</p>
+                    <img src="../img/Portfolio__UIDesign__Coronel__Star.png" alt="" class="services__third__mid">
+                    <p class="services__third__bot">Casa Mare</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer">
+                <a href="../index.html">RETURN HOME</a>
+            </div>
+        </footer>
 </body>
 </html>
