@@ -995,10 +995,16 @@
                 .Aboutme__skills__strokeStar {
                 justify-self: center;
                 padding: 0 0 50px 0 ;
+                margin: 0;
                 }
                 .Aboutme__template__strokeStar2 {
                 grid-area: strokeStar2;
                 justify-self: center;
+                padding: 0;
+                margin: 0;
+                }
+                .Aboutme__skills__content--grid {
+                    width: auto;
                 }
         .footer {
         height: 10vh;
@@ -1063,6 +1069,43 @@
             }
             .WhatIdo__p {
             text-align: center;
+            }
+    .Banner__aboutme__Designer--text {
+        font-size: 3.5rem;
+        line-height: 3rem;
+        text-align: center;
+        padding: 150px 0 0 0 ;
+        }
+        .Aboutme__skills {
+        grid-template-areas: 
+        " strokeStar2"
+        " title "
+        " strokeStar "
+        " content "
+        ;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto;
+        }
+            .Aboutme__skills__title {
+            font-size: 3.5rem;
+            line-height: 3.5rem;   
+            justify-self: center;
+            margin: 0 0 0 0 ;
+            padding: 50px 0 50px 0;
+            }
+            .Aboutme__skills__strokeStar {
+            justify-self: center;
+            padding: 0 0 50px 0 ;
+            margin: 0;
+            }
+            .Aboutme__template__strokeStar2 {
+            grid-area: strokeStar2;
+            justify-self: center;
+            padding: 0;
+            margin: 0;
+            }
+            .Aboutme__skills__content--grid {
+                width: auto;
             }
     }
 </style>
